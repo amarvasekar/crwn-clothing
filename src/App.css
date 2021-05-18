@@ -1,11 +1,11 @@
 body {
-    font-family: 'Lobster', cursive;
-    font-family: 'Spartan', sans-serif;
-    padding: 20px 60px;
+  font-family: 'Lobster', cursive;
+  font-family: 'Spartan', sans-serif;
+  padding: 20px 60px;
 }
 
 a {
-    text-decoration: none;
-    color: black;
-    font-size: 14px;
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
 }
