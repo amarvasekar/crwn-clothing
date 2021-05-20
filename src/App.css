@@ -8,10 +8,35 @@ body {
   font-family: 'Lobster', cursive;
   font-family: 'Spartan', sans-serif;
   padding: 20px 60px;
+  background-image: linear-gradient(
+    to right top,
+    #9fc130,
+    #00c273,
+    #00b9ba,
+    #00a7eb,
+    #008bed,
+    #2d7ceb,
+    #4d6be6,
+    #6956dc,
+    #8f4edb,
+    #af43d7,
+    #cd33cf,
+    #e818c4
+  );
 }
 
 a {
   text-decoration: none;
-  color: black;
+  color: white;
   font-size: 14px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  color: white;
 }

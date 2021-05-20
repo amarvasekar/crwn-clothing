@@ -1,6 +1,7 @@
 import React from 'react'
 import FormInput from '../form-input/form-input.component'
 import CustomButton from '../custom-button/custom-button.component'
+import Alerts from '../alerts/alerts.component'
 import { auth, signInWithGoogle } from '../../firebase/firebase.utils'
 
 import './sign-in.style.scss'
@@ -11,6 +12,8 @@ class SignIn extends React.Component {
     this.state = {
       email: '',
       password: '',
+      errorMessage: '',
+      alertType: '',
     }
   }
 
@@ -26,7 +29,8 @@ class SignIn extends React.Component {
         password: '',
       })
     } catch (error) {
-      console.log(error)
+      this.setState({ errorMessage: error.message, alertType: 'error' })
+      // console.log('error=>', error.message)
     }
 
     this.setState({ email: '', password: '' })
@@ -67,6 +71,12 @@ class SignIn extends React.Component {
             Sign In with Google
           </CustomButton>
         </form>
+        {this.state.errorMessage ? (
+          <Alerts
+            alertType={this.state.alertType}
+            errorMessage={this.state.errorMessage}
+          />
+        ) : null}
       </div>
     )
   }

@@ -2,6 +2,7 @@ import React from 'react'
 
 import FormInput from '../form-input/form-input.component'
 import CustomButton from '../custom-button/custom-button.component'
+import Alerts from '../alerts/alerts.component'
 
 import { auth, createUserProfileDocument } from '../../firebase/firebase.utils'
 
@@ -25,7 +26,10 @@ class SignUp extends React.Component {
     const { displayName, email, password, confirmPassword } = this.state
 
     if (password !== confirmPassword) {
-      alert("passwords don't match")
+      this.setState({
+        errorMessage: 'Password does not match.',
+        alertType: 'error',
+      })
       return
     }
 
@@ -42,6 +46,8 @@ class SignUp extends React.Component {
         email: '',
         password: '',
         confirmPassword: '',
+        errorMessage: '',
+        alertType: '',
       })
     } catch (error) {
       console.error(error)
@@ -95,6 +101,10 @@ class SignUp extends React.Component {
           />
           <CustomButton type="submit">SIGN UP</CustomButton>
         </form>
+        <Alerts
+          alertType={this.state.alertType}
+          errorMessage={this.state.errorMessage}
+        />
       </div>
     )
   }
