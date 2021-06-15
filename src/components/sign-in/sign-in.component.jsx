@@ -3,7 +3,7 @@ import FormInput from '../form-input/form-input.component'
 import CustomButton from '../custom-button/custom-button.component'
 import Alerts from '../alerts/alerts.component'
 import { auth, signInWithGoogle } from '../../firebase/firebase.utils'
-import { ReactComponent as GoogleIcon } from '../../assets/google-icon.svg'
+// import { ReactComponent as GoogleIcon } from '../../assets/google-icon.svg'
 
 import './sign-in.style.scss'
 
