@@ -29,4 +29,25 @@
     margin-left: auto;
     font-size: 36px;
   }
+
+  .text-warning {
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    p {
+      font-size: 12px;
+      font-weight: 400;
+    }
+  }
+  button {
+    width: 150px;
+    margin-left: auto;
+
+    span {
+      font-family: 'Lobster', cursive !important;
+      font-family: 'Spartan', sans-serif !important;
+    }
+    &:hover span {
+      background: linear-gradient(rgb(40, 160, 229), rgb(1, 94, 148));
+    }
+  }
 }
